@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
     <script src="https://kit.fontawesome.com/c103a8d15b.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 
@@ -16,15 +18,47 @@
 
     <link rel="stylesheet" href="styles\styles.css">
     <title>Home</title>
+    <!-- <style>
+      body {
+        background-image: url(galaxy-min.jpg); 
+        margin:220px auto 500px auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        max-width: 100dvw;
+        max-height: 100dvh;
+      }
+    </style> -->
   </head>
   <body>
+    <script src="script.js"></script>
+    
+    <script>
+      function setBackGroundImage() {
+        var pathArray = window.location.pathname.split('/');
+        var fileName = pathArray.pop();
+
+        var background = {
+          'index.html': 'galaxy-min.jpg',
+          'portfolio.html': 'Sun-min.jpg',
+          'about.html': 'dark-universe-min.jpg',
+        };
+        if (background.hasOwnProperty(fileName)) {
+          var imageUrl = 'url(pictures/' + background[fileName] + ')';
+          document.body.style.backgroundImage = imageUrl;
+        }
+      }
+      window.onload = setBackGroundImage;
+    </script>
+
     <header>
       <div class="nav-bar">
         <nav>
           <ul class="navigation">
             <li><a href="index.html"><p>Home</p></a></li>
-            <li><a><p>Portfolio</p></a></li>
-            <li><a><p>About</p></a></li>
+            <li><a href ="portfolio.html"><p>Portfolio</p></a></li>
+            <li><a href ="about.html"><p>About</p></a></li>
           </ul>
       </nav>
       </div>
@@ -39,12 +73,12 @@
           </p><br>
           <!-- <button class="btn btn-dark">See my projects!</button> -->
           <p class="button">
-            <a class="inside-button" href="https://github.com/KhangMBui" target="_blank">See my projects!</a>
+            <a class="inside-button" href="portfolio.html" target="_blank">See my projects!</a>
           </p>
         </div>
         
         <div class="image">
-          <img src="styles\Birthday.jpg">
+          <img src="pictures\Birthday.jpg">
         </div>
       </div>
       <ul class="left">
@@ -73,6 +107,10 @@
 
       
     </section>
+
+    <footer>
+      <p id="copyright">© Author: Khang Bui ©</p>
+    </footer>
 
   </body>
 

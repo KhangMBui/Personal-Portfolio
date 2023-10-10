@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charser="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script src="https://kit.fontawesome.com/c103a8d15b.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="styles\styles.css">
+    <title>Home</title>
+    <!-- <style>
+      body {
+        background-image: url(dark-universe-min.jpg); 
+        margin:220px auto 500px auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        max-width: 100dvw;
+        max-height: 100dvh;
+      }
+    </style> -->
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+      function setBackGroundImage() {
+        var pathArray = window.location.pathname.split('/');
+        var fileName = pathArray.pop();
+
+        var background = {
+          'index.html': 'galaxy-min.jpg',
+          'portfolio.html': 'Sun-min.jpg',
+          'about.html': 'dark-universe-min.jpg',
+        };
+        if (background.hasOwnProperty(fileName)) {
+          var imageUrl = 'url(pictures/' + background[fileName] + ')';
+          document.body.style.backgroundImage = imageUrl;
+        }
+      }
+      window.onload = setBackGroundImage;
+    </script>
+    <header>
+      <div class="nav-bar">
+        <nav>
+          <ul class="navigation">
+            <li><a href="index.html"><p>Home</p></a></li>
+            <li><a href ="portfolio.html"><p>Portfolio</p></a></li>
+            <li><a href ="about.html"><p>About</p></a></li>
+          </ul>
+      </nav>
+      </div>
+    </header>
+    <section class="content">
+      
+      <ul class="left">
+        <li class="socialmedia">
+          <a href="https://github.com/KhangMBui" target="_blank">
+            <i class="icon fa-brands fa-github socialmedia fa-xl"></i>
+          </a>
+        </li>
+        <li class="socialmedia">
+          <a href="https://www.linkedin.com/in/khangmbui/" target="_blank">
+            <i class="icon fa-brands fa-linkedin socialmedia fa-xl"></i>
+          </a>
+        </li>
+        <li class="socialmedia">
+          <a href="https://www.instagram.com/khang.cpp/" target="_blank">
+            <i class="icon fa-brands fa-instagram socialmedia fa-xl"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="right">
+        <li class="socialmedia">
+          <a href="mailto:khang.bui@wsu.edu">khang.bui@wsu.edu</a>
+        </li>
+      </ul>
+
+
+      
+    </section>
+
+    <footer>
+      <p id="copyright">© Author: Khang Bui ©</p>
+    </footer>
+
+  </body>
+
+</html>
