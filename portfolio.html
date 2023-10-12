@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang ="en">
+  <head>
+    <meta charser="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script src="https://kit.fontawesome.com/c103a8d15b.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="styles\styles.css">
+    <title>Portfolio</title>
+    <!-- <style>
+      /*body {
+        background-image: url(pictures/Sun-min.jpg); 
+        margin:220px auto 500px auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        max-width: 100dvw;
+        max-height: 100dvh;
+      }*/
+    </style> -->
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <script>
+      function setBackGroundImage() {
+        var pathArray = window.location.pathname.split('/');
+        var fileName = pathArray.pop();
+
+        var background = {
+          'index.html': 'galaxy-min.jpg',
+          'portfolio.html': 'Sun2.jpg',
+          'about.html': 'dark-universe-min.jpg',
+        };
+        if (background.hasOwnProperty(fileName)) {
+          var imageUrl = 'url(pictures/' + background[fileName] + ')';
+          document.body.style.backgroundImage = imageUrl;
+        }
+      }
+      window.onload = setBackGroundImage;
+    </script>
+    <header>
+      <div class="nav-bar">
+        <nav>
+          <ul class="navigation">
+            <li><a href="index.html"><p>Home</p></a></li>
+            <li><a href ="portfolio.html"><p>Portfolio</p></a></li>
+            <li><a href ="about.html"><p>About</p></a></li>
+          </ul>
+      </nav>
+      </div>
+    </header>
+    <section class="content">
+      
+      <ul class="left">
+        <li class="socialmedia">
+          <a href="https://github.com/KhangMBui" target="_blank">
+            <i class="icon fa-brands fa-github socialmedia fa-xl"></i>
+          </a>
+        </li>
+        <li class="socialmedia">
+          <a href="https://www.linkedin.com/in/khangmbui/" target="_blank">
+            <i class="icon fa-brands fa-linkedin socialmedia fa-xl"></i>
+          </a>
+        </li>
+        <li class="socialmedia">
+          <a href="https://www.instagram.com/khang.cpp/" target="_blank">
+            <i class="icon fa-brands fa-instagram socialmedia fa-xl"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="right">
+        <li class="socialmedia">
+          <a href="mailto:khang.bui@wsu.edu">khang.bui@wsu.edu</a>
+        </li>
+      </ul>
+
+      <div class="projects">
+
+        <a href="https://github.com/KhangMBui/Product_Landing_Page_TNOTB" target="blank">
+          <div class="project-container">
+            <img id ="product-page" src="pictures\  .jpg">
+            <div class="text-overlay">
+              <h3>Product Landing Page</h3>
+              <p class="project-description">A static product landing page for the album "The Number of the Beast" by Iron Maiden. Featuring navigation header, song demo, price tags, and pre-order form.</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://github.com/KhangMBui/SlashTributePage" target="blank">
+          <div class="project-container">
+            <img id ="product-page" src="pictures\SlashImage.avif">
+            <div class="text-overlay">
+              <h3>Tribute Page</h3>
+              <p class="project-description">A static website designed as a homage to the legendary guitarist Saul Hudson, famously known as Slash.</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://github.com/KhangMBui/City-Skyline" target="blank">
+          <div class="project-container">
+            <img id ="product-page" src="pictures\CitySkyline.gif">
+            <div class="text-overlay">
+              <h3>City Skyline</h3>
+              <p class="project-description">A simple and visually captivating representation of a city skyline that transitions between day and night, creating a dynamic and atmospheric effect.</p>
+            </div>
+          </div>   
+
+        <a href="https://github.com/KhangMBui/SnakeGame" target="blank">
+          <div class="project-container">
+            <img id ="product-page" src="pictures\Snakerzaa.jpg">
+            <div class="text-overlay">
+              <h3>Snake Game</h3>
+              <p class="project-description">The classic snake game in C# with dynamic food generation, real-time movement, collision detection, fun Mr. Bean sound effects, and a screenshot system</p>
+            </div>
+          </div>
+        </a>
+       
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p id="copyright">© Author: Khang Bui ©</p>
+    </footer>
+
+  </body>
+
+</html>
