@@ -20,9 +20,6 @@ header {
   .project-container img {
     transform: scale(0.8);
   }
-  .intro-container, .image img {
-    transform: scale(0.9);
-  }
   
 
 }
@@ -240,10 +237,6 @@ footer {
 .project-container:hover .text-overlay {
   height: 150%;
 }
-/* .project-container:hover .text-overlay>h3 {
-  opacity: 1;
-} */
-
 .project-container {
   position:relative;
   width: 100%;
@@ -292,3 +285,164 @@ footer {
   /* opacity: 0; */
   /* transition: opacity 0.5s ease;  */
 }
+
+
+/* About.html */
+.experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-container, .experience-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 75vw;
+  max-height: 200vh;
+  border-radius: 2%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-left: 13%;
+  flex-direction: column; /* Change to column to stack the circles vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: flex-start;
+  margin-bottom: 10vh;
+}
+.education-container-2 {
+  margin-top: 3vh;
+}
+.circle-1, .circle-2, .circle-3 {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  opacity: unset;
+}
+.circle-2 {
+  background-color: rgb(255, 165, 0);
+}
+.circle-3 {
+  background-color: green;
+}
+.circle-1:hover, .circle-2:hover, .circle-3:hover {
+  opacity: 0.7;
+}
+.circle {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  padding-left: 1vw;
+  padding-top: 2vh;
+}
+.line {
+  margin-top: 1.5vh;
+  width: 100%; /* Adjust the width as needed to control the line's length */
+  height: 1px; /* Set the height to determine the line's thickness */
+  background-color: rgb(255, 255, 255, 0.4);
+}
+.education-text, .experience-text {
+  display: flex;
+  color: white;
+  position: absolute;
+  margin-left: 35%;
+  padding-top: 1vh;
+  font-family: Helvetica;
+  font-weight: 100px;
+}
+.education-picture {
+  margin-top: 4vh;
+  margin-left: 5vw;
+  border-radius: 2%;
+  overflow: hidden;
+  max-width: 65vw;
+  max-height: 79vh; 
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.education-picture-2 {
+  margin-top: 6vh;
+  margin-left: 5vw;
+  border-radius: 2%;
+  overflow: hidden;
+  max-width: 65vw;
+  max-height: 80vh; 
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.education-picture img{
+  /* object-fit: contain; */
+  object-fit: contain;
+}
+.education-picture-2 img {
+  /* padding-bottom: 6vh; */
+  object-fit: fill;
+  
+}
+.school-info {
+  position: absolute;
+  color: white;
+  text-align: center;
+  bottom: -20%;
+  text-shadow: 0 0 20px rgba(0, 0 ,0, 1);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: height 0.4s ease;
+  height: 35%;
+  align-items: center;
+  font-family: 'Exo';
+
+}
+
+.school-info-2 {
+  position: absolute;
+  color: white;
+  text-align: center;
+  bottom: 0;
+  text-shadow: 0 0 20px rgba(0, 0 ,0, 1);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: height 0.4s ease;
+  height: 15%;
+
+  font-family: 'Exo';
+}
+.school-info h3, .school-info-2 h3 {
+  font-weight: bold;
+  font-size: 3vw;
+}
+/* .school-info h2 {
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+} */
+.school-description {
+  position: absolute;
+  color: white;
+  font-size: 1.7vw;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  margin: 0 auto;
+}
+
+.education-picture:hover img {
+  opacity: 0.5;
+}
+.education-picture-2:hover img {
+  opacity: 0.5;
+}
+.education-picture:hover .school-info {
+  height: 100%;
+}
+.education-picture-2:hover .school-info-2 {
+  height: 80%;
+}
+
+.education-picture:hover .school-description {
+  opacity: 1;
+}
+.education-picture-2:hover .school-description {
+  opacity: 1;
+}
+
