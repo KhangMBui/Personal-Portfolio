@@ -291,6 +291,48 @@ footer {
 .experience {
   display: flex;
   flex-direction: column;
+  color: white;
+  font-family:'Helvetica', 'sans-serif';
+  justify-content: center;
+}
+.exp-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 7vh;
+}
+.exp-title h1 {
+  font-family: 'Exo';
+  color: white;
+  font-size: 2.5vw;
+}
+.exp-title h4 {
+  margin-top: 2.5vh;
+  font-size: 1.7vw;
+  font-family: 'Exo';
+}
+.exp-description {
+  font-family: 'Exo';
+  text-align:left;
+  padding-top: 3vh;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  padding-bottom: 3vh;
+  font-size: 1.3vw;
+}
+.board {
+  background-color:  rgba(104,104,104, 0.5);
+  /* max-width: 65vw; */
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border-radius: 3%;
+  /* max-height: 150vh; */
+  transition: background-color 0.6s ease
+}
+.board:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .education-container, .experience-container {
@@ -445,4 +487,5 @@ footer {
 .education-picture-2:hover .school-description {
   opacity: 1;
 }
+
 
