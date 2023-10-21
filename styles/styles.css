@@ -28,12 +28,12 @@ h1, h5 {
   font-family: 'Exo', 'sans-serif';
 }
 h1 {
-  font-size: 75px;
+  font-size: 4.9vw;
   font-weight: bold;
   color: rgb(0, 255, 198);
 }
 h5 {
-  font-size: 18px;
+  font-size: 1.3vw;
 }
  body {
   /* background-image: url(galaxy.jpg);  */
@@ -52,8 +52,8 @@ h5 {
   flex-direction: row;
   /* flex-wrap: wrap; */
   list-style: none;
-  gap: 100px;
-  margin-top: 30px;
+  gap: 8.33vw;
+  margin-top: 5vh;
   align-items: center;
 }
 .navigation a p:hover{
@@ -84,15 +84,15 @@ h5 {
 }
 .socialmedia {
   list-style: none;
-  font-size: 40px;
+  font-size: 2.6vw;
   color: rgb(190, 241, 247);
   display:inline-block;
 }
 .intro-container {
-  margin-left: 250px;
+  margin-left: 16vw;
   color: rgb(190, 241, 247);
-  height: 100px;
-  top: -40px;
+  height: 8.33vw;
+  top: -3.33vw;
   display: flex;
   flex-direction: row;
 }
@@ -103,25 +103,25 @@ h5 {
 .navigation a>p, .navigation a {
   color: rgb(190, 241, 247);
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.7vw;
   font-family: 'Orbitron', sans-serif;
 }
 .intro-container img {
   object-fit: cover;
-  margin-left: 100px;
-  width: 400px;
+  margin-left: 8.33vw;
+  width: 26vw;
   max-width: 100%;
   vertical-align: middle;
   border-radius: 3%;
-  margin-top: -50px;
+  margin-top: -4.1667vw;
   height: auto;
 
   min-width: 200px;
   min-height: auto;
 }
 .intro-para {
-  font-size: 23px;
-  max-width: 600px;
+  font-size: 1.5vw;
+  max-width: 37vw;
 }
 /* .btn {
   background-color: rgb(0, 255, 198);
